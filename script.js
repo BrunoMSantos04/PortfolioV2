@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling para links internos
+  
     const smoothScroll = (target) => {
         const element = document.querySelector(target);
         window.scrollTo({
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Efeito de digitação para o título da seção hero
+    
     const typeWriter = (element, text, speed) => {
         let i = 0;
         const timer = setInterval(() => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         typeWriter(heroSubtitle, originalText, 100);
     }
 
-    // Animação de entrada para elementos quando scrollados para a view
+    
     const animateOnScroll = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(item);
     });
 
-    // Animação de progresso para as habilidades
+    
     const animateSkills = () => {
         const skills = document.querySelectorAll('.skill-progress');
         skills.forEach(skill => {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Animação de contagem para os números de experiência
+    
     const animateNumbers = () => {
         const numbers = document.querySelectorAll('.number-stat');
         numbers.forEach(number => {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Ativar animações quando a seção correspondente estiver visível
+    
     const experienceSection = document.querySelector('#experiencia');
     const skillsSection = document.querySelector('#habilidades');
 
@@ -99,14 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (experienceSection) sectionObserver.observe(experienceSection);
     if (skillsSection) sectionObserver.observe(skillsSection);
 
-    // Efeito parallax simples para a seção hero
+    
     window.addEventListener('scroll', () => {
         const hero = document.querySelector('.hero');
         const scrollPosition = window.pageYOffset;
         hero.style.backgroundPositionY = scrollPosition * 0.7 + 'px';
     });
 
-    // Menu mobile toggle
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav ul');
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Efeito de digitação para o subtítulo da seção hero
+
 const heroSubtitle = document.querySelector('.hero h2.typewriter');
 if (heroSubtitle) {
     const texts = ["Desenvolvedor Full Stack", "Apaixonado por Tecnologia", "Solucionador de Problemas"];
